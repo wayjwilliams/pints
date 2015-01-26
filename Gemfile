@@ -38,13 +38,15 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
 gem 'simple_form', '~> 3.1.0'
 gem 'bootstrap-sass', '~> 3.3.0'
+gem 'dotenv-rails', :groups => [:development, :test]
 gem 'carrierwave'
 gem "mini_magick", "~> 4.0.0.rc"
 gem 'fog'
 gem 'remotipart', '~> 1.2'
 gem 'devise'
 gem 'rails_12factor'
-gem 'dotenv-rails'
 gem 'masonry-rails'
+gem 'figaro'
