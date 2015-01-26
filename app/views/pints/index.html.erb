@@ -2,7 +2,7 @@
 
 <div id="pints" class="transitions-enabled">
   <% @pints.each do |pint| %>
-  <div class="box panel panel-default">
+  <div class="box panel panel-default" style="pull-right">
     <%= link_to image_tag(pint.photo.url(:thumb)), pint %>
     <div class="panel-body">
       <%= pint.note %><br/>
