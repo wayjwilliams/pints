@@ -1,5 +1,5 @@
 class Pint < ActiveRecord::Base
-  validates :address, :photo, :note, presence: true
+  validates :photo, :note, presence: true
 
   mount_uploader :photo, PhotoUploader
 

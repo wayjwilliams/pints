@@ -1,0 +1,22 @@
+<%= link_to 'Back', pints_path %>
+
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading-center">
+        <%= image_tag @pint.photo.url(:thumb).to_s %>
+      </div>
+      <div class="panel-body">
+        <p><%= @pint.note %></p>
+        <p><strong><%= @pint.user.email if @pint.user %></strong></p>
+
+        <% if @pint.user == current_user %>
+        <%= link_to edit_pint_path(@pint) do %>
+        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit
+        <% end %>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
