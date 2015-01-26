@@ -1,0 +1,16 @@
+<% @pints.each do |pint| %>
+  <%= link_to "#", data: {toggle: "modal", target: "#pint-modal#{pint.id}"} do %>
+    <%= image_tag pint.photo.url(:thumb) %>
+  <% end %>
+
+  <div class="modal fade" id="pint-modal<%= pint.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div id="pint-form">
+          <%= image_tag pint.photo.url(:large) %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>

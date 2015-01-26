@@ -1,0 +1,10 @@
+<% if @pint.errors.any? %>
+  $("#pint-form").html("<%= j render partial: 'pints/form' %>");
+<% else %>
+
+
+  $("#newPintModal").modal("hide");
+  $("#pints").html("<%= j render partial: 'pints/pints' %>");
+  $("#pint-form").html("<%= j render partial: 'pints/form' %>");
+
+<% end %>

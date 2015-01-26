@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PINT-Interesting</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+
+<% if user_signed_in? %>
+  Hi <%= current_user.email %>
+  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+
+  <div class="col-xs-4">
+    <div class="pull-right">
+      <p>
+        Create New Pint!
+        <%= link_to "New Pint", data: {toggle: "modal", target: "#newPintModal"} do %>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-beer fa-stack-1x"></i>
+        </span>
+        <% end %>
+      </p>
+    </div>
+  </div>
+<% end %>
+
+    <!-- Modal -->
+  <div class="modal fade" id="newPintModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div id="pint-form">
+          <%= render partial: 'pints/form' %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+  <%= yield %>
+
+</div>
+</body>
+</html>
