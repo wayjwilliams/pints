@@ -2,11 +2,12 @@
 
 <div id="pints" class="transitions-enabled">
   <% @pints.each do |pint| %>
-  <div class="box panel panel-default" style="pull-right">
+  <div class="box panel panel-default">
     <%= link_to image_tag(pint.photo.url(:thumb)), pint %>
     <div class="panel-body">
       <%= pint.note %><br/>
       <strong><%= pint.user.email if pint.user %></strong>
+
       <% if pint.user == current_user %>
       <div class="actions">
         <%= link_to edit_pint_path(pint) do %>
@@ -17,6 +18,7 @@
         <% end %>
       </div>
       <% end %>
+
     </div>
   </div>
   <% end %>
