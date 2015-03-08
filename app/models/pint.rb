@@ -1,7 +1,4 @@
 class Pint < ActiveRecord::Base
-  validates :photo, :note, presence: true
-
-  mount_uploader :photo, PhotoUploader
-
   belongs_to :user
+  has_attached_file :image, :styles => { :medium => "300x300", :thumb => "100x100" }
 end

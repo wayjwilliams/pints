@@ -53,6 +53,6 @@ class PintsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def pint_params
-    params.require(:pint).permit(:address, :photo, :note)
+    params.require(:pint).permit(:address, :image, :note)
   end
 end

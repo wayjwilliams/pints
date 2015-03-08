@@ -3,21 +3,23 @@
 <div id="pints" class="transitions-enabled">
   <% @pints.each do |pint| %>
   <div class="box panel panel-default">
-    <%= link_to image_tag(pint.photo.url(:thumb)), pint %>
+    <%= link_to image_tag(pint.image.url(:medium)), pint %>
     <div class="panel-body">
-      <%= pint.note %><br/>
-      <strong><%= pint.user.email if pint.user %></strong>
+      <p><%= pint.note %></p>
+      <p><strong><%= pint.user.email if pint.user %></strong></p>
 
       <% if pint.user == current_user %>
       <div class="actions">
         <%= link_to edit_pint_path(pint) do %>
-        <span class="glyphicon glyphicon-edit"></span> Edit
+          <span class="glyphicon glyphicon-edit"></span>
+          Edit
         <% end %>
         <%= link_to pint, method: :delete, data: { confirm: 'Are you sure?' } do %>
-        <span class="glyphicon glyphicon-trash"></span> Delete
+          <span class="glyphicon glyphicon-trash"></span>
+          Delete
         <% end %>
       </div>
-      <% end %>
+    <% end %>
 
     </div>
   </div>

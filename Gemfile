@@ -43,8 +43,7 @@ gem 'spring',        group: :development
 gem 'simple_form', '~> 3.1.0'
 gem 'bootstrap-sass', '~> 3.3.0'
 gem 'dotenv-rails', :groups => [:development, :test]
-gem 'carrierwave'
-gem "mini_magick", "~> 4.0.0.rc"
+gem "paperclip", "~> 4.2"
 gem 'fog'
 gem 'remotipart', '~> 1.2'
 gem 'devise'
