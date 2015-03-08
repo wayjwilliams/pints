@@ -44,7 +44,7 @@ gem 'simple_form', '~> 3.1.0'
 gem 'bootstrap-sass', '~> 3.3.0'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem "paperclip", "~> 4.2"
-gem 'fog'
+gem 'aws-sdk', '<2.0'
 gem 'remotipart', '~> 1.2'
 gem 'devise'
 gem 'rails_12factor'
