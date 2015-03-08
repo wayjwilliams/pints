@@ -172,7 +172,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
-  masonry-rails
+  masonry-rails (~> 0.2.4)
   paperclip (~> 4.2)
   pg
   rails (= 4.1.6)
