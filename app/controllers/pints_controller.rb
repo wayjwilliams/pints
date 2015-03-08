@@ -51,8 +51,7 @@ class PintsController < ApplicationController
     redirect_to pints_path, notice: "Not authorized to edit this pint" if @pint.nil?
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
   def pint_params
-    params.require(:pint).permit(:description, :image, :note)
+    params.require(:pint).permit(:image, :note)
   end
 end
